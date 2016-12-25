@@ -3,6 +3,7 @@
 #include "ToughTanks.h"
 #include "Projectile.h"
 #include "BarrelPri.h"
+#include "BarrelSec.h"
 #include "TankTurret.h"
 #include "TankAimingComponent.h"
 
@@ -18,9 +19,10 @@ void UTankAimingComponent::BeginPlay()
 	Super::BeginPlay();// needed for the BP to run its begin play 
 	LastFireTime = FPlatformTime::Seconds();//so first fire is after the start
 }
-void UTankAimingComponent::Initialise(UBarrelPri* BarrelPriToSet, UTankTurret* TurretToSet)
+void UTankAimingComponent::Initialise(UBarrelPri* BarrelPriToSet, UTankTurret* TurretToSet, UBarrelSec* BarrelSecToSet)
 {
 	BarrelPri = BarrelPriToSet;
+	BarrelSec = BarrelSecToSet;
 	Turret = TurretToSet;
 }
 bool UTankAimingComponent::IsBarrelMoving()
@@ -35,7 +37,7 @@ void UTankAimingComponent::TickComponent(float DeltaTime, enum ELevelTick TickTy
 	{
 		FiringState = EFiringState::AmmoOut;
 	}
-	else if ((FPlatformTime::Seconds() - LastFireTime) < ReloadTimeInSeconds)
+	else if ((FPlatformTime::Seconds() - LastFireTime) < PriReloadTimeInSeconds)
 	{
 		FiringState = EFiringState::Reloading;
 	}
@@ -65,7 +67,7 @@ void UTankAimingComponent::AimAt(FVector HitLocation)
 		OutLaunchVelocity,
 		StartLocation,
 		HitLocation,
-		LaunchSpeed,
+		LaunchSpeedPri,
 		false,
 		0,
 		0,
@@ -104,16 +106,31 @@ void UTankAimingComponent::FirePri()
 	{
 
 		if (!ensure(BarrelPri)) { return; }
-		if (!ensure(ProjectileBluePrint)) { return; }
+		if (!ensure(PriProjectileBluePrint)) { return; }
 		//spawn a PROJECTILE
 		auto Projectile = GetWorld()->SpawnActor<AProjectile>(
-			ProjectileBluePrint,
+			PriProjectileBluePrint,
 			BarrelPri->GetSocketLocation(FName("Projectile")),
 			BarrelPri->GetSocketRotation(FName("Projectile"))
 			);
-		Projectile->LaunchProjectile(LaunchSpeed);
+		Projectile->LaunchProjectile(LaunchSpeedPri);
 		LastFireTime = FPlatformTime::Seconds();
 		AmmoPri--;
 	}
 }
+void UTankAimingComponent::FireSec()
+{
 
+	if (!ensure(BarrelSec)) { return; }
+	if (!ensure(SecProjectileBluePrint)) { return; }
+	//spawn a PROJECTILE
+	auto Projectile = GetWorld()->SpawnActor<AProjectile>(
+		SecProjectileBluePrint,
+		BarrelSec->GetSocketLocation(FName("Projectile")),
+		BarrelSec->GetSocketRotation(FName("Projectile"))
+		);
+	Projectile->LaunchProjectile(LaunchSpeedSec);
+	//LastFireTime = FPlatformTime::Seconds();
+	AmmoSec--;
+
+}

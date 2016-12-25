@@ -61,7 +61,12 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UBarrelSec); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UBarrelSec)
 
 
-#define ToughTanks_Source_ToughTanks_Public_BarrelSec_h_14_PRIVATE_PROPERTY_OFFSET
+#define ToughTanks_Source_ToughTanks_Public_BarrelSec_h_14_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__MaxDegreesPerSecond() { return STRUCT_OFFSET(UBarrelSec, MaxDegreesPerSecond); } \
+	FORCEINLINE static uint32 __PPO__MaxElevationDegrees() { return STRUCT_OFFSET(UBarrelSec, MaxElevationDegrees); } \
+	FORCEINLINE static uint32 __PPO__MinElevationDegrees() { return STRUCT_OFFSET(UBarrelSec, MinElevationDegrees); }
+
+
 #define ToughTanks_Source_ToughTanks_Public_BarrelSec_h_11_PROLOG
 #define ToughTanks_Source_ToughTanks_Public_BarrelSec_h_14_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \

@@ -16,6 +16,7 @@ enum class EFiringState : uint8
 // forward declaration
 class AProjectile;
 class UBarrelPri;
+class UBarrelSec;
 class UTankTurret;
 
 UCLASS(ClassGroup = (Custom), meta = (BlueprintSpawnableComponent))
@@ -27,9 +28,11 @@ public:
 	void BeginPlay();
 	// Sets default values for this component's properties
 	UFUNCTION(BlueprintCallable, Category = "Setup")
-		void Initialise(UBarrelPri* BarrelPriToSet, UTankTurret* TurretToSet);
+		void Initialise(UBarrelPri* BarrelPriToSet, UTankTurret* TurretToSet, UBarrelSec* BarrelSecToSet);
 	UFUNCTION(BlueprintCallable, Category = "Setup")
 		void FirePri();
+	UFUNCTION(BlueprintCallable, Category = "Setup")
+		void FireSec();
 	UFUNCTION(BlueprintCallable, Category = "Setup")
 		int32 GetAmmoCount() const;
 
@@ -47,19 +50,30 @@ private:
 	bool IsBarrelMoving();
 
 	UBarrelPri* BarrelPri = nullptr;
+	UBarrelSec* BarrelSec = nullptr;
 	UTankTurret* Turret = nullptr;
-
-	UPROPERTY(EditDefaultsOnly, Category = "Firing")
-		TSubclassOf<AProjectile> ProjectileBluePrint;
-	UPROPERTY(EditAnywhere, Category = "Firing")// consider EditDefaultsOnly
+// Firing main Gun
+	UPROPERTY(EditDefaultsOnly, Category = "Primary Firing")
+		TSubclassOf<AProjectile> PriProjectileBluePrint;
+	UPROPERTY(EditAnywhere, Category = "Primary Firing")// consider EditDefaultsOnly
 		int32 AmmoPri = 8;// how much Ammo you start with for main gun
-	UPROPERTY(EditDefaultsOnly, Category = "Firing")
-		float LaunchSpeed = 9000; //TODO find out if this number is even close
-	UPROPERTY(EditDefaultsOnly, Category = "Firing")
-		float ReloadTimeInSeconds = 3;
+	UPROPERTY(EditDefaultsOnly, Category = "Primary Firing")
+		float LaunchSpeedPri = 5000; //TODO find out if this number is even close
+	UPROPERTY(EditDefaultsOnly, Category = "Primary Firing")
+		float PriReloadTimeInSeconds = 3;
+
+// Firing Secondary Gun
+	UPROPERTY(EditDefaultsOnly, Category = "Secondary Firing")
+		TSubclassOf<AProjectile> SecProjectileBluePrint;
+	UPROPERTY(EditAnywhere, Category = "Secondary Firing")// consider EditDefaultsOnly
+		int32 AmmoSec = 99;// how much Ammo you start with for main gun
+	UPROPERTY(EditDefaultsOnly, Category = "Secondary Firing")
+		float LaunchSpeedSec = 10000; //TODO find out if this number is even close
+	UPROPERTY(EditDefaultsOnly, Category = "Secondary Firing")
+		float SecReloadTimeInSeconds = .2;
 
 	FVector CurrentAimDirection;
-	void MoveBarrelTowards(FVector AimDirection);
+	//void MoveBarrelTowards(FVector AimDirection);
 
 	double LastFireTime = 0;
 };
