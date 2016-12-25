@@ -3,6 +3,8 @@
 #include "ToughTanks.h"
 #include "TankTrack.h"
 
+// check and see is its the on hit events dummby this is you after a couple of drinks
+
 UTankTrack::UTankTrack()
 {
 	PrimaryComponentTick.bCanEverTick = false;//TODO should this really tick
