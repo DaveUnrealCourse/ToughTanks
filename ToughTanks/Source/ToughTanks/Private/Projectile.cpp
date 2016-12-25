@@ -13,7 +13,7 @@ AProjectile::AProjectile()
 	CollisionMesh = CreateDefaultSubobject<UStaticMeshComponent>(FName("Collision Mesh"));
 	SetRootComponent(CollisionMesh);
 	CollisionMesh->SetNotifyRigidBodyCollision(true);
-	CollisionMesh->SetVisibility(false);
+	CollisionMesh->SetVisibility(true);
 
 	LaunchBlast = CreateDefaultSubobject<UParticleSystemComponent>(FName("Launch Blast"));
 	LaunchBlast->AttachTo(RootComponent);
@@ -41,7 +41,7 @@ void AProjectile::Tick(float DeltaTime)
 void AProjectile::LaunchProjectile(float Speed)
 {
 	auto Time = GetWorld()->GetTimeSeconds();
-	//UE_LOG(LogTemp, Warning, TEXT("Time: %f Fired at this speed: %f"), Time, Speed);
+	UE_LOG(LogTemp, Warning, TEXT("Time: %f Fired at this speed: %f"), Time, Speed);
 	ProjectileMovement->SetVelocityInLocalSpace(FVector::ForwardVector * Speed);
 	ProjectileMovement->Activate();
 }

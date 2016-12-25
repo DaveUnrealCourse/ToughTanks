@@ -74,7 +74,7 @@ void UTankAimingComponent::AimAt(FVector HitLocation)
 	{
 		auto AimDirection = OutLaunchVelocity.GetSafeNormal();
 		CurrentAimDirection = AimDirection;
-		MoveBarrelTowards(AimDirection);
+		//MoveBarrelTowards(AimDirection);
 	}
 	else
 	{
@@ -83,7 +83,7 @@ void UTankAimingComponent::AimAt(FVector HitLocation)
 		//UE_LOG(LogTemp, Warning, TEXT("%s I Have No Aim Direction"),Name);
 	}
 }
-
+/*
 void UTankAimingComponent::MoveBarrelTowards(FVector AimDirection)
 {
 	if (!ensure(BarrelPri && Turret)) { return; }
@@ -97,7 +97,7 @@ void UTankAimingComponent::MoveBarrelTowards(FVector AimDirection)
 	//Allways yaw the shortest way
 	if (FMath::Abs(DeltaRotatorTurret.Yaw) > 180) { DeltaRotatorTurret.Yaw = DeltaRotatorTurret.Yaw - 360; }
 	Turret->Azimuth(DeltaRotatorTurret.Yaw);
-}
+}*/
 void UTankAimingComponent::FirePri()
 {
 	if (FiringState == EFiringState::Locked || FiringState == EFiringState::Aiming)

@@ -54,7 +54,7 @@ private:
 	UPROPERTY(EditAnywhere, Category = "Firing")// consider EditDefaultsOnly
 		int32 AmmoPri = 8;// how much Ammo you start with for main gun
 	UPROPERTY(EditDefaultsOnly, Category = "Firing")
-		float LaunchSpeed = 60000000; //TODO find out if this number is even close
+		float LaunchSpeed = 9000; //TODO find out if this number is even close
 	UPROPERTY(EditDefaultsOnly, Category = "Firing")
 		float ReloadTimeInSeconds = 3;
 
