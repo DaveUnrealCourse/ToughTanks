@@ -17,12 +17,12 @@ public:
 		void SetThrottle(float Throttle);
 	//Max Force in Newtons!!!
 	UPROPERTY(EditDefaultsOnly, Category = "Setup")
-		float TrackMaxDrivingFource = 60000000;//Assume 40 ton tank and 1 g of exceleration
+		float TrackMaxDrivingFource = 6000000;//Assume 40 ton tank and 1 g of exceleration
 private:
 	UTankTrack();
-	void BeginPlay();
+	virtual void BeginPlay() override;
 	UFUNCTION()
-		void OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, FVector NormalImpulse, const FHitResult& Hit);
+	void OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, FVector NormalImpulse, const FHitResult& Hit);
 	//virtual void TickComponent(float DeltaTime, enum ELevelTick TickType, FActorComponentTickFunction *ThisTickFunction)override;
 	void ApplySidewaysForce();
 	void DriveTrack();
