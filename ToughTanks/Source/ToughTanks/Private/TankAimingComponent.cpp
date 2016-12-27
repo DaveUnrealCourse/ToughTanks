@@ -17,7 +17,7 @@ UTankAimingComponent::UTankAimingComponent()
 void UTankAimingComponent::BeginPlay()
 {
 	Super::BeginPlay();// needed for the BP to run its begin play 
-	LastFireTime = FPlatformTime::Seconds();//so first fire is after the start
+	LastFireTimePri = FPlatformTime::Seconds();//so first fire is after the start
 }
 void UTankAimingComponent::Initialise(UBarrelPri* BarrelPriToSet, UTankTurret* TurretToSet, UBarrelSec* BarrelSecToSet)
 {
@@ -37,7 +37,7 @@ void UTankAimingComponent::TickComponent(float DeltaTime, enum ELevelTick TickTy
 	{
 		FiringState = EFiringState::AmmoOut;
 	}
-	else if ((FPlatformTime::Seconds() - LastFireTime) < PriReloadTimeInSeconds)
+	else if ((FPlatformTime::Seconds() - LastFireTimePri) < PriReloadTimeInSeconds)
 	{
 		FiringState = EFiringState::Reloading;
 	}
@@ -76,7 +76,7 @@ void UTankAimingComponent::AimAt(FVector HitLocation)
 	{
 		auto AimDirection = OutLaunchVelocity.GetSafeNormal();
 		CurrentAimDirection = AimDirection;
-		//MoveBarrelTowards(AimDirection);
+		MoveBarrelTowards(AimDirection);
 	}
 	else
 	{
@@ -85,7 +85,7 @@ void UTankAimingComponent::AimAt(FVector HitLocation)
 		//UE_LOG(LogTemp, Warning, TEXT("%s I Have No Aim Direction"),Name);
 	}
 }
-/*
+
 void UTankAimingComponent::MoveBarrelTowards(FVector AimDirection)
 {
 	if (!ensure(BarrelPri && Turret)) { return; }
@@ -99,7 +99,7 @@ void UTankAimingComponent::MoveBarrelTowards(FVector AimDirection)
 	//Allways yaw the shortest way
 	if (FMath::Abs(DeltaRotatorTurret.Yaw) > 180) { DeltaRotatorTurret.Yaw = DeltaRotatorTurret.Yaw - 360; }
 	Turret->Azimuth(DeltaRotatorTurret.Yaw);
-}*/
+}
 void UTankAimingComponent::FirePri()
 {
 	if (FiringState == EFiringState::Locked || FiringState == EFiringState::Aiming)
@@ -114,7 +114,7 @@ void UTankAimingComponent::FirePri()
 			BarrelPri->GetSocketRotation(FName("Projectile"))
 			);
 		Projectile->LaunchProjectile(LaunchSpeedPri);
-		LastFireTime = FPlatformTime::Seconds();
+		LastFireTimePri = FPlatformTime::Seconds();
 		AmmoPri--;
 	}
 }

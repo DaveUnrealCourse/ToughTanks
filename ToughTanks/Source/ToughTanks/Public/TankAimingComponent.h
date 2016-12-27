@@ -73,7 +73,7 @@ private:
 		float SecReloadTimeInSeconds = .2;
 
 	FVector CurrentAimDirection;
-	//void MoveBarrelTowards(FVector AimDirection);
+	void MoveBarrelTowards(FVector AimDirection);
 
-	double LastFireTime = 0;
+	double LastFireTimePri = 0;
 };
