@@ -22,7 +22,7 @@ void UTankTrack::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UP
 	//Apply the sideways force
 	ApplySidewaysForce();
 	DriveTrack();
-	UE_LOG(LogTemp, Warning, TEXT("%f Throttle"), CurrentThrottle)
+	//UE_LOG(LogTemp, Warning, TEXT("%f Throttle"), CurrentThrottle)
 	CurrentThrottle = 0;
 }
 //void UTankTrack::TickComponent(float DeltaTime, enum ELevelTick TickType, FActorComponentTickFunction *ThisTickFunction){}

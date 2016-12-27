@@ -1,26 +1,28 @@
 // Copyright Dead Weight Dave Inc 2017
 
 #include "ToughTanks.h"
-#include "Tank.h"
+#include "TankAimingComponent.h"
 #include "TankAIController.h"
-void ATankAIController::BeginPlay()
-{
-	Super::BeginPlay();
-	auto ControlledTank = GetControlledTank();
+void ATankAIController::BeginPlay() { Super::BeginPlay(); }
 
-	if (!ensure(ControlledTank)) { UE_LOG(LogTemp, Warning, TEXT("AIController BeginPlay Has no Tank")) }
-}
+void ATankAIController::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
 
-ATank* ATankAIController::GetControlledTank() const
-{
-	return Cast<ATank>(GetPawn());
-}
-ATank* ATankAIController::GetPlayerTank() const
-{
 	auto PlayerTank = GetWorld()->GetFirstPlayerController()->GetPawn();
-	if (!ensure(PlayerTank)) { UE_LOG(LogTemp, Warning, TEXT("AI couldn't find Player Tank")) return nullptr; }
-	return Cast<ATank>(PlayerTank);
+	auto ControlledTank = GetPawn();
+	if (!ensure(PlayerTank && ControlledTank)) { return; }
+
+	//Move To Player
+	MoveToActor(PlayerTank, AcceptanceRadis);
+
+	//Aim Towards player
+	auto AimingComponent = ControlledTank->FindComponentByClass<UTankAimingComponent>();
+	AimingComponent->AimAt(PlayerTank->GetActorLocation());
+	//TODO  if aiming or locked than fire
+	if (AimingComponent->GetFiringState() == EFiringState::Locked)
+	{
+		AimingComponent->FirePri();
+	}
 }
-
-
 
