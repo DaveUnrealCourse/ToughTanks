@@ -58,7 +58,7 @@ private:
 	UPROPERTY(EditAnywhere, Category = "Primary Firing")// consider EditDefaultsOnly
 		int32 AmmoPri = 8;// how much Ammo you start with for main gun
 	UPROPERTY(EditDefaultsOnly, Category = "Primary Firing")
-		float LaunchSpeedPri = 5000; //TODO find out if this number is even close
+		float LaunchSpeedPri = 10000; //TODO find out if this number is even close
 	UPROPERTY(EditDefaultsOnly, Category = "Primary Firing")
 		float PriReloadTimeInSeconds = 3;
 
@@ -66,7 +66,7 @@ private:
 	UPROPERTY(EditDefaultsOnly, Category = "Secondary Firing")
 		TSubclassOf<AProjectile> SecProjectileBluePrint;
 	UPROPERTY(EditAnywhere, Category = "Secondary Firing")// consider EditDefaultsOnly
-		int32 AmmoSec = 99;// how much Ammo you start with for main gun
+		int32 AmmoSec = 9999999;// how much Ammo you start with for main gun
 	UPROPERTY(EditDefaultsOnly, Category = "Secondary Firing")
 		float LaunchSpeedSec = 10000; //TODO find out if this number is even close
 	UPROPERTY(EditDefaultsOnly, Category = "Secondary Firing")
@@ -76,4 +76,5 @@ private:
 	void MoveBarrelTowards(FVector AimDirection);
 
 	double LastFireTimePri = 0;
+	double LastFireTimeSec = 0;
 };

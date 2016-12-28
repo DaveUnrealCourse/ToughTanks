@@ -130,7 +130,7 @@ void UTankAimingComponent::FireSec()
 		BarrelSec->GetSocketRotation(FName("Projectile"))
 		);
 	Projectile->LaunchProjectile(LaunchSpeedSec);
-	//LastFireTime = FPlatformTime::Seconds();
+	LastFireTimeSec = FPlatformTime::Seconds();
 	AmmoSec--;
 
 }
