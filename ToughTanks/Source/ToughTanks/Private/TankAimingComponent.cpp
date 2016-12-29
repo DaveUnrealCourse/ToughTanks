@@ -88,7 +88,7 @@ void UTankAimingComponent::AimAt(FVector HitLocation)
 
 void UTankAimingComponent::MoveBarrelTowards(FVector AimDirection)
 {
-	if (!ensure(BarrelPri && Turret)) { return; }
+	if (!ensure(BarrelPri && BarrelSec && Turret)) { return; }
 	// get the barrel direction from the suggested project velocity and rase it to mach 
 	auto BarrelRotator = BarrelPri->GetForwardVector().Rotation();
 	auto TurretRotator = Turret->GetForwardVector().Rotation();
@@ -96,6 +96,7 @@ void UTankAimingComponent::MoveBarrelTowards(FVector AimDirection)
 	auto DeltaRotatorBarrel = AimAsRotator - BarrelRotator;
 	auto DeltaRotatorTurret = AimAsRotator - TurretRotator;
 	BarrelPri->Elevate(DeltaRotatorBarrel.Pitch);
+	BarrelSec->Elevate(DeltaRotatorBarrel.Pitch);
 	//Allways yaw the shortest way
 	if (DeltaRotatorTurret.Yaw > 180) { DeltaRotatorTurret.Yaw = DeltaRotatorTurret.Yaw - 360; }
 	Turret->Azimuth(DeltaRotatorTurret.Yaw);

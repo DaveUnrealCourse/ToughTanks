@@ -3,7 +3,11 @@
 #include "ToughTanks.h"
 #include "TankAimingComponent.h"
 #include "TankAIController.h"
-void ATankAIController::BeginPlay() { Super::BeginPlay(); }
+void ATankAIController::BeginPlay() 
+{ 
+	Super::BeginPlay(); 
+
+}
 
 void ATankAIController::Tick(float DeltaTime)
 {
