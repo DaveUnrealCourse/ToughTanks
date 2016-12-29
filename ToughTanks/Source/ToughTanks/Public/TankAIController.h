@@ -18,7 +18,7 @@ public:
 	void BeginPlay();
 protected:
 	UPROPERTY(EditAnywhere, Category = "Setup")// consider EditDefaultsOnly
-		float AcceptanceRadis = 80;// how close the AI can Get to the player
+		float AcceptanceRadis = 8000;// how close the AI can Get to the player
 private:
 	//	virtual void BeginPlay() override;
 	virtual void Tick(float DeltaSeconds) override;
