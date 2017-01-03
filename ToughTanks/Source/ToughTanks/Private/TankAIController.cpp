@@ -29,7 +29,7 @@ void ATankAIController::Tick(float DeltaTime)
 	if (AimingComponent->GetFiringState() == EFiringState::Locked)
 	{
 		AimingComponent->FirePri();
-		AimingComponent->FireSec();
+		AimingComponent->FireSec();//TODO add a second ENUM for Sec Fire(right now they dont fire Sec when out of Pri
 	}
 }
 
