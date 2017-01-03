@@ -12,5 +12,15 @@ void UTankTurret::Azimuth(float RelativeSpeed)
 	auto RawNewAzimuth = RelativeRotation.Yaw + AzimuthChange;
 	SetRelativeRotation(FRotator(0, RawNewAzimuth, 0));
 }
+void UTankTurret::RockLeft()
+{
+	UE_LOG(LogTemp, Warning, TEXT("Rock Left"))
+}
+
+void UTankTurret::RockRight()
+{
+	UE_LOG(LogTemp, Warning, TEXT("Rock Right"))
+}
+
 
 

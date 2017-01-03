@@ -20,6 +20,8 @@ public:
 		void IntendMoveForward(float Throw);
 	UFUNCTION(BlueprintCallable, Category = "Input")
 		void IntendTurnRight(float Throw);
+	//UFUNCTION(BlueprintCallable, Category = "Input")
+	//	void IntendRockRight();
 private:
 	//Called from the pathfinding logic by the AI Controllers
 	virtual void RequestDirectMove(const FVector& MoveVelocity, bool bForceMaxSpeed) override;
