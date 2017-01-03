@@ -20,10 +20,11 @@ public:
 		void RockLeft();
 	UFUNCTION(BlueprintCallable, Category = "Input")
 		void RockRight();
+//	UPROPERTY(EditDefaultsOnly, Category = "Setup")
+	//	FVector RockForce =  (0.f,100.f,0.f);
 private:
 	UPROPERTY(EditDefaultsOnly, Category = "Setup")
 		float MaxDegreesPerSecond = 25;
-	UPROPERTY(EditDefaultsOnly, Category = "Setup")
-		float RockForce = 25000;
+
 
 };

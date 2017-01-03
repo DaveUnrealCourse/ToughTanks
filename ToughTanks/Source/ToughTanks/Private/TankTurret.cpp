@@ -14,6 +14,12 @@ void UTankTurret::Azimuth(float RelativeSpeed)
 }
 void UTankTurret::RockLeft()
 {
+	//auto ForceLocation = GetComponentLocation();
+	//auto TankRoot = Cast<UPrimitiveComponent>(GetOwner()->GetRootComponent());
+	
+	//TankRoot->AddTorque(FVector(290000000.f,0.f,0.f));
+	//TankRoot->AddForce(FVector(10000000000.f,0.f, 0.f));
+	//TankRoot->AddForceAtLocation(RockForce, ForceLocation);
 	UE_LOG(LogTemp, Warning, TEXT("Rock Left"))
 }
 
