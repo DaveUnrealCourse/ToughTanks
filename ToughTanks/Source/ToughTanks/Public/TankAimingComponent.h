@@ -34,7 +34,9 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Setup")
 		void FireSec();
 	UFUNCTION(BlueprintCallable, Category = "Setup")
-		int32 GetAmmoCount() const;
+		int32 GetPriAmmoCount() const;
+	UFUNCTION(BlueprintCallable, Category = "Setup")
+		int32 GetSecAmmoCount() const;
 
 	void AimAt(FVector HitLocation);
 
@@ -66,7 +68,7 @@ private:
 	UPROPERTY(EditDefaultsOnly, Category = "Secondary Firing")
 		TSubclassOf<AProjectile> SecProjectileBluePrint;
 	UPROPERTY(EditAnywhere, Category = "Secondary Firing")// consider EditDefaultsOnly
-		int32 AmmoSec = 9999999;// how much Ammo you start with for main gun
+		int32 AmmoSec = 999;// how much Ammo you start with for Second gun
 	UPROPERTY(EditDefaultsOnly, Category = "Secondary Firing")
 		float LaunchSpeedSec = 10000; //TODO find out if this number is even close
 	UPROPERTY(EditDefaultsOnly, Category = "Secondary Firing")

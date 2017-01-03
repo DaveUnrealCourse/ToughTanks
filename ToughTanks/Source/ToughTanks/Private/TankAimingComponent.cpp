@@ -36,26 +36,30 @@ void UTankAimingComponent::TickComponent(float DeltaTime, enum ELevelTick TickTy
 	if (AmmoPri < 1)
 	{
 		FiringState = EFiringState::AmmoOut;
+		//UE_LOG(LogTemp, Warning, TEXT(" Ammo Out"));
 	}
 	else if ((FPlatformTime::Seconds() - LastFireTimePri) < PriReloadTimeInSeconds)
 	{
 		FiringState = EFiringState::Reloading;
+		//UE_LOG(LogTemp, Warning, TEXT(" Reloading"));
 	}
 	else if (IsBarrelMoving())
 	{
 		FiringState = EFiringState::Aiming;
+		//UE_LOG(LogTemp, Warning, TEXT(" Aiming"));
 	}
-
 	else
 	{
 		FiringState = EFiringState::Locked;
+		//UE_LOG(LogTemp, Warning, TEXT("Locked"));
 	}
 }
 EFiringState UTankAimingComponent::GetFiringState() const
 {
 	return FiringState;
 }
-int32 UTankAimingComponent::GetAmmoCount() const { return AmmoPri; }
+int32 UTankAimingComponent::GetPriAmmoCount() const { return AmmoPri; }
+int32 UTankAimingComponent::GetSecAmmoCount() const { return AmmoSec; }
 
 void UTankAimingComponent::AimAt(FVector HitLocation)
 {
