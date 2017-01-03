@@ -44,7 +44,7 @@ void AProjectile::BeginPlay()
 void AProjectile::LaunchProjectile(float Speed)
 {
 	auto Time = GetWorld()->GetTimeSeconds();
-	UE_LOG(LogTemp, Warning, TEXT("Time: %f Fired at this speed: %f"), Time, Speed);
+	//UE_LOG(LogTemp, Warning, TEXT("Time: %f Fired at this speed: %f"), Time, Speed);
 	ProjectileMovement->SetVelocityInLocalSpace(FVector::ForwardVector * Speed);
 	ProjectileMovement->Activate();
 }
@@ -56,6 +56,17 @@ void AProjectile::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, U
 
 	SetRootComponent(ImpactBlast);
 	CollisionMesh->DestroyComponent();
+
+	// this does the damage
+	UGameplayStatics::ApplyRadialDamage(
+		this,
+		ProjectileDamage,
+		GetActorLocation(),
+		ExplosionForce->Radius,
+		UDamageType::StaticClass(),
+		TArray<AActor*>()//Damage all actors
+		);
+
 	FTimerHandle Timer;
 	GetWorld()->GetTimerManager().SetTimer(Timer,this, &AProjectile::OnTimerExpire,DestroyDelay,false);
 }

@@ -5,6 +5,7 @@
 
 //class ATank;// forward declaration
 class UTankAimingComponent;
+//class ATank;
 // Responsible for helping the player be controlled
 UCLASS()
 class TOUGHTANKS_API ATankPlayerController : public APlayerController
@@ -14,6 +15,8 @@ class TOUGHTANKS_API ATankPlayerController : public APlayerController
 protected:
 	UFUNCTION(BlueprintImplementableEvent, Category = "Setup")
 		void FoundAimingComponent(UTankAimingComponent* AimCompRef);
+//	UFUNCTION(BlueprintCallable, Category = "Setup")
+	//	ATank* GetControlldTank() const;
 private:
 	virtual void BeginPlay() override;
 
