@@ -4,12 +4,18 @@
 #include "Tank.h"
 
 
+float ATank::GetHealthPercent() const
+{
+	return (float)CurrentHealth / (float) StartingHealth;
+}
+
 // Sets default values
 ATank::ATank()
 {
  	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 }
+
 float ATank::TakeDamage(float DamageAmount, struct FDamageEvent const & DamageEvent, class AController * EventInstigator, AActor * DamageCauser)
 {
 	int32 DamagePoints = FPlatformMath::RoundToInt(DamageAmount);
@@ -23,10 +29,10 @@ float ATank::TakeDamage(float DamageAmount, struct FDamageEvent const & DamageEv
 
 }
 // Called when the game starts or when spawned
-void ATank::BeginPlay(){Super::BeginPlay();}
+//void ATank::BeginPlay(){Super::BeginPlay();}
 
 // Called every frame
-void ATank::Tick( float DeltaTime ){Super::Tick( DeltaTime );}
+//void ATank::Tick( float DeltaTime ){Super::Tick( DeltaTime );}
 
 // Called to bind functionality to input
 //void ATank::SetupPlayerInputComponent(class UInputComponent* InputComponent)
