@@ -15,7 +15,10 @@ public:
 	virtual float TakeDamage(float DamageAmount,struct FDamageEvent const & DamageEvent,class AController * EventInstigator,AActor * DamageCauser) override;
 	UFUNCTION(Blueprintpure, Category = "Health")
 	float GetHealthPercent() const;
-
+	UFUNCTION(Blueprintpure, Category = "Health")
+	float GetStartingHealth();
+	UFUNCTION(Blueprintpure, Category = "Health")
+	float GetCurrentHealth();
 	// Called when the game starts or when spawned
 	//virtual void BeginPlay() override;
 	// Called every frame
