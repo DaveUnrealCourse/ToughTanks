@@ -5,6 +5,8 @@
 #include "GameFramework/Pawn.h"
 #include "Tank.generated.h"
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FTankDelegate);
+
 UCLASS()
 class TOUGHTANKS_API ATank : public APawn
 {
@@ -19,6 +21,8 @@ public:
 	float GetStartingHealth();
 	UFUNCTION(Blueprintpure, Category = "Health")
 	float GetCurrentHealth();
+
+	FTankDelegate OnDeath;
 	// Called when the game starts or when spawned
 	//virtual void BeginPlay() override;
 	// Called every frame
@@ -30,6 +34,8 @@ private:
 	int32 StartingHealth = 100;
 	UPROPERTY(EditDefaultsOnly, Category = "Health")
 	int32 CurrentHealth = StartingHealth;
+	UPROPERTY(EditDefaultsOnly, Category = "TeamInfo")
+	int32 Team = 0;
 	// Called to bind functionality to input
 	//virtual void SetupPlayerInputComponent(class UInputComponent* InputComponent) override;
 };
