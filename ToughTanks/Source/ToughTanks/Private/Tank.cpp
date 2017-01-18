@@ -40,7 +40,11 @@ float ATank::TakeDamage(float DamageAmount, struct FDamageEvent const & DamageEv
 
 }
 // Called when the game starts or when spawned
-//void ATank::BeginPlay(){Super::BeginPlay();}
+void ATank::BeginPlay()
+{
+	Super::BeginPlay();
+	CurrentHealth = StartingHealth;
+}
 
 // Called every frame
 //void ATank::Tick( float DeltaTime ){Super::Tick( DeltaTime );}

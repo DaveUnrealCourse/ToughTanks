@@ -24,7 +24,7 @@ public:
 
 	FTankDelegate OnDeath;
 	// Called when the game starts or when spawned
-	//virtual void BeginPlay() override;
+	virtual void BeginPlay() override;
 	// Called every frame
 	//virtual void Tick( float DeltaSeconds ) override;
 
@@ -33,7 +33,7 @@ private:
 	UPROPERTY(EditDefaultsOnly, Category = "Health")
 	int32 StartingHealth = 100;
 	UPROPERTY(EditDefaultsOnly, Category = "Health")
-	int32 CurrentHealth = StartingHealth;
+	int32 CurrentHealth;// initalized in begian play
 	UPROPERTY(EditDefaultsOnly, Category = "TeamInfo")
 	int32 Team = 0;
 	// Called to bind functionality to input
