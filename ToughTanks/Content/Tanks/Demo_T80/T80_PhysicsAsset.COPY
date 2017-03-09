@@ -1,0 +1,283 @@
+Begin Object Class=PhysicsAsset Name="T80_PhysicsAsset"
+   Begin Object Class=BodySetup Name="BodySetup_34"
+   End Object
+   Begin Object Class=BodySetup Name="BodySetup_35"
+   End Object
+   Begin Object Class=BodySetup Name="BodySetup_36"
+   End Object
+   Begin Object Class=BodySetup Name="BodySetup_37"
+   End Object
+   Begin Object Class=BodySetup Name="BodySetup_38"
+   End Object
+   Begin Object Class=BodySetup Name="BodySetup_39"
+   End Object
+   Begin Object Class=BodySetup Name="BodySetup_40"
+   End Object
+   Begin Object Class=BodySetup Name="BodySetup_41"
+   End Object
+   Begin Object Class=BodySetup Name="BodySetup_42"
+   End Object
+   Begin Object Class=BodySetup Name="BodySetup_43"
+   End Object
+   Begin Object Class=BodySetup Name="BodySetup_5"
+   End Object
+   Begin Object Class=BodySetup Name="BodySetup_6"
+   End Object
+   Begin Object Class=BodySetup Name="BodySetup_7"
+   End Object
+   Begin Object Class=PhysicsConstraintTemplate Name="PhysicsConstraintTemplate_25"
+   End Object
+   Begin Object Class=PhysicsConstraintTemplate Name="PhysicsConstraintTemplate_26"
+   End Object
+   Begin Object Class=PhysicsConstraintTemplate Name="PhysicsConstraintTemplate_27"
+   End Object
+   Begin Object Class=PhysicsConstraintTemplate Name="PhysicsConstraintTemplate_28"
+   End Object
+   Begin Object Class=PhysicsConstraintTemplate Name="PhysicsConstraintTemplate_29"
+   End Object
+   Begin Object Class=PhysicsConstraintTemplate Name="PhysicsConstraintTemplate_30"
+   End Object
+   Begin Object Class=PhysicsConstraintTemplate Name="PhysicsConstraintTemplate_31"
+   End Object
+   Begin Object Class=PhysicsConstraintTemplate Name="PhysicsConstraintTemplate_32"
+   End Object
+   Begin Object Class=PhysicsConstraintTemplate Name="PhysicsConstraintTemplate_33"
+   End Object
+   Begin Object Class=PhysicsConstraintTemplate Name="PhysicsConstraintTemplate_34"
+   End Object
+   Begin Object Class=PhysicsConstraintTemplate Name="PhysicsConstraintTemplate_35"
+   End Object
+   Begin Object Class=PhysicsConstraintTemplate Name="PhysicsConstraintTemplate_36"
+   End Object
+   Begin Object Class=SkeletalBodySetup Name="SkeletalBodySetup_0"
+   End Object
+   Begin Object Class=SkeletalBodySetup Name="SkeletalBodySetup_1"
+   End Object
+   Begin Object Class=SkeletalBodySetup Name="SkeletalBodySetup_2"
+   End Object
+   Begin Object Class=SkeletalBodySetup Name="SkeletalBodySetup_3"
+   End Object
+   Begin Object Class=SkeletalBodySetup Name="SkeletalBodySetup_4"
+   End Object
+   Begin Object Class=SkeletalBodySetup Name="SkeletalBodySetup_5"
+   End Object
+   Begin Object Class=SkeletalBodySetup Name="SkeletalBodySetup_6"
+   End Object
+   Begin Object Class=SkeletalBodySetup Name="SkeletalBodySetup_7"
+   End Object
+   Begin Object Class=SkeletalBodySetup Name="SkeletalBodySetup_8"
+   End Object
+   Begin Object Class=SkeletalBodySetup Name="SkeletalBodySetup_9"
+   End Object
+   Begin Object Class=SkeletalBodySetup Name="SkeletalBodySetup_10"
+   End Object
+   Begin Object Class=SkeletalBodySetup Name="SkeletalBodySetup_11"
+   End Object
+   Begin Object Class=SkeletalBodySetup Name="SkeletalBodySetup_12"
+   End Object
+   Begin Object Name="BodySetup_34"
+      AggGeom=(SphylElems=((Center=(X=-2.984549,Y=5.376679,Z=3.843606),Orientation=(X=-0.157443,Y=0.589310,Z=0.765567,W=-0.204533),Radius=16.467299,Length=24.364019)))
+      BoneName="Wheel_L_05"
+      CollisionTraceFlag=CTF_UseSimpleAsComplex
+   End Object
+   Begin Object Name="BodySetup_35"
+      AggGeom=(SphylElems=((Center=(X=2.530545,Y=4.833921,Z=3.823734),Orientation=(X=0.140342,Y=0.598652,Z=0.767803,W=0.179996),Radius=16.368895,Length=23.445608)))
+      BoneName="Wheel_L_02"
+      CollisionTraceFlag=CTF_UseSimpleAsComplex
+   End Object
+   Begin Object Name="BodySetup_36"
+      AggGeom=(SphylElems=((Center=(X=5.072432,Y=5.335965,Z=3.753310),Orientation=(X=0.232195,Y=0.590188,Z=0.719473,W=0.283059),Radius=16.424215,Length=25.161366)))
+      BoneName="Wheel_L_03"
+      CollisionTraceFlag=CTF_UseSimpleAsComplex
+   End Object
+   Begin Object Name="BodySetup_37"
+      AggGeom=(SphylElems=((Center=(X=-1.281957,Y=5.659426,Z=-5.520105),Orientation=(X=0.673651,Y=-0.117910,Z=-0.125788,W=0.718658),Radius=20.210522,Length=22.131561)))
+      BoneName="Wheel_R_03"
+      CollisionTraceFlag=CTF_UseSimpleAsComplex
+   End Object
+   Begin Object Name="BodySetup_38"
+      AggGeom=(SphylElems=((Center=(X=-0.550174,Y=3.476459,Z=-4.999182),Orientation=(X=0.518673,Y=0.014474,Z=0.023846,W=0.854518),Radius=21.265688,Length=22.579945)))
+      BoneName="Wheel_R_04"
+      CollisionTraceFlag=CTF_UseSimpleAsComplex
+   End Object
+   Begin Object Name="BodySetup_39"
+      AggGeom=(SphylElems=((Center=(X=-1.261627,Y=3.732150,Z=-3.940229),Orientation=(X=0.630646,Y=0.112635,Z=0.135005,W=0.755892),Radius=16.533056,Length=21.907034)))
+      BoneName="Wheel_R_05"
+      CollisionTraceFlag=CTF_UseSimpleAsComplex
+   End Object
+   Begin Object Name="BodySetup_40"
+      AggGeom=(SphylElems=((Center=(X=-5.786417,Y=0.049004,Z=-6.969697),Orientation=(X=0.552130,Y=-0.413205,Z=-0.433899,W=0.579781),Radius=18.246889,Length=33.548946)))
+      BoneName="Wheel_R_06"
+      CollisionTraceFlag=CTF_UseSimpleAsComplex
+   End Object
+   Begin Object Name="BodySetup_41"
+      AggGeom=(SphylElems=((Center=(X=-1.634239,Y=4.916335,Z=-5.765486),Orientation=(X=0.544728,Y=0.093579,Z=0.141099,W=0.821344),Radius=16.953554,Length=24.433138)))
+      BoneName="Wheel_R_02"
+      CollisionTraceFlag=CTF_UseSimpleAsComplex
+   End Object
+   Begin Object Name="BodySetup_42"
+      AggGeom=(SphylElems=((Center=(X=-5.252282,Y=5.040565,Z=-4.393844),Orientation=(X=0.548650,Y=0.314347,Z=0.385131,W=0.672193),Radius=18.138046,Length=25.585890)))
+      BoneName="Wheel_R_01"
+      CollisionTraceFlag=CTF_UseSimpleAsComplex
+   End Object
+   Begin Object Name="BodySetup_43"
+      AggGeom=(BoxElems=((Center=(X=0.108122,Y=-0.313552,Z=7.031098),Orientation=(X=0.499034,Y=0.497190,Z=0.500951,W=0.502808),X=170.609680,Y=52.722805,Z=338.955292)))
+      BoneName="T80_Root"
+      CollisionTraceFlag=CTF_UseSimpleAsComplex
+   End Object
+   Begin Object Name="BodySetup_5"
+      AggGeom=(SphylElems=((Center=(X=12.095501,Y=-0.873889,Z=5.258235),Orientation=(X=0.508065,Y=0.412537,Z=0.476605,W=0.586968),Radius=18.099243,Length=29.695246)))
+      BoneName="Wheel_L_01"
+      CollisionTraceFlag=CTF_UseSimpleAsComplex
+   End Object
+   Begin Object Name="BodySetup_6"
+      AggGeom=(SphylElems=((Center=(X=1.320798,Y=8.682598,Z=3.868394),Orientation=(X=-0.157238,Y=0.583309,Z=0.769421,W=-0.207407),Radius=22.037750,Length=25.033945)))
+      BoneName="Wheel_L_04"
+      CollisionTraceFlag=CTF_UseSimpleAsComplex
+   End Object
+   Begin Object Name="BodySetup_7"
+      AggGeom=(SphylElems=((Center=(X=-11.516592,Y=0.043841,Z=5.277419),Orientation=(X=0.492680,Y=-0.425025,Z=-0.496014,W=0.574969),Radius=18.137993,Length=29.112598)))
+      BoneName="Wheel_L_06"
+      CollisionTraceFlag=CTF_UseSimpleAsComplex
+   End Object
+   Begin Object Name="PhysicsConstraintTemplate_25"
+      DefaultInstance=(JointName="Wheel_L_01",ConstraintBone1="Wheel_L_01",ConstraintBone2="T80_Root",Pos2=(X=109.249390,Y=-72.208649,Z=-12.499939),SecAxis2=(X=0.000000,Y=-0.000000,Z=-1.000000))
+   End Object
+   Begin Object Name="PhysicsConstraintTemplate_26"
+      DefaultInstance=(JointName="Wheel_L_04",ConstraintBone1="Wheel_L_04",ConstraintBone2="T80_Root",Pos2=(X=-11.473442,Y=-72.208649,Z=-12.499939),SecAxis2=(X=0.000000,Y=-0.000000,Z=-1.000000))
+   End Object
+   Begin Object Name="PhysicsConstraintTemplate_27"
+      DefaultInstance=(JointName="Wheel_L_05",ConstraintBone1="Wheel_L_05",ConstraintBone2="T80_Root",Pos2=(X=-52.561852,Y=-72.208649,Z=-12.499939),SecAxis2=(X=0.000000,Y=-0.000000,Z=-1.000000))
+   End Object
+   Begin Object Name="PhysicsConstraintTemplate_28"
+      DefaultInstance=(JointName="Wheel_L_06",ConstraintBone1="Wheel_L_06",ConstraintBone2="T80_Root",Pos2=(X=-94.929993,Y=-72.208649,Z=-12.499939),SecAxis2=(X=0.000000,Y=-0.000000,Z=-1.000000))
+   End Object
+   Begin Object Name="PhysicsConstraintTemplate_29"
+      DefaultInstance=(JointName="Wheel_L_02",ConstraintBone1="Wheel_L_02",ConstraintBone2="T80_Root",Pos2=(X=68.190498,Y=-72.208649,Z=-12.499939),SecAxis2=(X=0.000000,Y=-0.000000,Z=-1.000000))
+   End Object
+   Begin Object Name="PhysicsConstraintTemplate_30"
+      DefaultInstance=(JointName="Wheel_L_03",ConstraintBone1="Wheel_L_03",ConstraintBone2="T80_Root",Pos2=(X=25.229956,Y=-72.208649,Z=-12.499939),SecAxis2=(X=0.000000,Y=-0.000000,Z=-1.000000))
+   End Object
+   Begin Object Name="PhysicsConstraintTemplate_31"
+      DefaultInstance=(JointName="Wheel_R_03",ConstraintBone1="Wheel_R_03",ConstraintBone2="T80_Root",Pos2=(X=25.229967,Y=71.750847,Z=-12.466095),SecAxis2=(X=0.000000,Y=-0.000000,Z=-1.000000))
+   End Object
+   Begin Object Name="PhysicsConstraintTemplate_32"
+      DefaultInstance=(JointName="Wheel_R_04",ConstraintBone1="Wheel_R_04",ConstraintBone2="T80_Root",Pos2=(X=-11.473431,Y=71.750847,Z=-12.466095),SecAxis2=(X=0.000000,Y=-0.000000,Z=-1.000000))
+   End Object
+   Begin Object Name="PhysicsConstraintTemplate_33"
+      DefaultInstance=(JointName="Wheel_R_05",ConstraintBone1="Wheel_R_05",ConstraintBone2="T80_Root",Pos2=(X=-52.561840,Y=71.750847,Z=-12.466095),SecAxis2=(X=0.000000,Y=-0.000000,Z=-1.000000))
+   End Object
+   Begin Object Name="PhysicsConstraintTemplate_34"
+      DefaultInstance=(JointName="Wheel_R_06",ConstraintBone1="Wheel_R_06",ConstraintBone2="T80_Root",Pos2=(X=-94.929977,Y=71.750847,Z=-12.466095),SecAxis2=(X=0.000000,Y=-0.000000,Z=-1.000000))
+   End Object
+   Begin Object Name="PhysicsConstraintTemplate_35"
+      DefaultInstance=(JointName="Wheel_R_01",ConstraintBone1="Wheel_R_01",ConstraintBone2="T80_Root",Pos2=(X=109.249405,Y=69.866249,Z=-12.466095),SecAxis2=(X=0.000000,Y=-0.000000,Z=-1.000000))
+   End Object
+   Begin Object Name="PhysicsConstraintTemplate_36"
+      DefaultInstance=(JointName="Wheel_R_02",ConstraintBone1="Wheel_R_02",ConstraintBone2="T80_Root",Pos2=(X=68.190514,Y=71.750847,Z=-12.466095),SecAxis2=(X=0.000000,Y=-0.000000,Z=-1.000000))
+   End Object
+   Begin Object Name="SkeletalBodySetup_0"
+      AggGeom=(SphylElems=((Center=(X=12.095501,Y=-0.873889,Z=5.258235),Orientation=(X=0.508065,Y=0.412537,Z=0.476605,W=0.586968),Radius=18.099243,Length=29.695246)))
+      BoneName="Wheel_L_01"
+      CollisionTraceFlag=CTF_UseSimpleAsComplex
+   End Object
+   Begin Object Name="SkeletalBodySetup_1"
+      AggGeom=(SphylElems=((Center=(X=1.320798,Y=8.682598,Z=3.868394),Orientation=(X=-0.157238,Y=0.583309,Z=0.769421,W=-0.207407),Radius=22.037750,Length=25.033945)))
+      BoneName="Wheel_L_04"
+      CollisionTraceFlag=CTF_UseSimpleAsComplex
+   End Object
+   Begin Object Name="SkeletalBodySetup_2"
+      AggGeom=(SphylElems=((Center=(X=-11.516592,Y=0.043841,Z=5.277419),Orientation=(X=0.492680,Y=-0.425025,Z=-0.496014,W=0.574969),Radius=18.137993,Length=29.112598)))
+      BoneName="Wheel_L_06"
+      CollisionTraceFlag=CTF_UseSimpleAsComplex
+   End Object
+   Begin Object Name="SkeletalBodySetup_3"
+      AggGeom=(SphylElems=((Center=(X=-2.984549,Y=5.376679,Z=3.843606),Orientation=(X=-0.157443,Y=0.589310,Z=0.765567,W=-0.204533),Radius=16.467299,Length=24.364019)))
+      BoneName="Wheel_L_05"
+      CollisionTraceFlag=CTF_UseSimpleAsComplex
+   End Object
+   Begin Object Name="SkeletalBodySetup_4"
+      AggGeom=(SphylElems=((Center=(X=2.530545,Y=4.833921,Z=3.823734),Orientation=(X=0.140342,Y=0.598652,Z=0.767803,W=0.179996),Radius=16.368895,Length=23.445608)))
+      BoneName="Wheel_L_02"
+      CollisionTraceFlag=CTF_UseSimpleAsComplex
+   End Object
+   Begin Object Name="SkeletalBodySetup_5"
+      AggGeom=(SphylElems=((Center=(X=5.072432,Y=5.335965,Z=3.753310),Orientation=(X=0.232195,Y=0.590188,Z=0.719473,W=0.283059),Radius=16.424215,Length=25.161366)))
+      BoneName="Wheel_L_03"
+      CollisionTraceFlag=CTF_UseSimpleAsComplex
+   End Object
+   Begin Object Name="SkeletalBodySetup_6"
+      AggGeom=(SphylElems=((Center=(X=-1.281957,Y=5.659426,Z=-5.520105),Orientation=(X=0.673651,Y=-0.117910,Z=-0.125788,W=0.718658),Radius=20.210522,Length=22.131561)))
+      BoneName="Wheel_R_03"
+      CollisionTraceFlag=CTF_UseSimpleAsComplex
+   End Object
+   Begin Object Name="SkeletalBodySetup_7"
+      AggGeom=(SphylElems=((Center=(X=-0.550174,Y=3.476459,Z=-4.999182),Orientation=(X=0.518673,Y=0.014474,Z=0.023846,W=0.854518),Radius=21.265688,Length=22.579945)))
+      BoneName="Wheel_R_04"
+      CollisionTraceFlag=CTF_UseSimpleAsComplex
+   End Object
+   Begin Object Name="SkeletalBodySetup_8"
+      AggGeom=(SphylElems=((Center=(X=-1.261627,Y=3.732150,Z=-3.940229),Orientation=(X=0.630646,Y=0.112635,Z=0.135005,W=0.755892),Radius=16.533056,Length=21.907034)))
+      BoneName="Wheel_R_05"
+      CollisionTraceFlag=CTF_UseSimpleAsComplex
+   End Object
+   Begin Object Name="SkeletalBodySetup_9"
+      AggGeom=(SphylElems=((Center=(X=-5.786417,Y=0.049004,Z=-6.969697),Orientation=(X=0.552130,Y=-0.413205,Z=-0.433899,W=0.579781),Radius=18.246889,Length=33.548946)))
+      BoneName="Wheel_R_06"
+      CollisionTraceFlag=CTF_UseSimpleAsComplex
+   End Object
+   Begin Object Name="SkeletalBodySetup_10"
+      AggGeom=(SphylElems=((Center=(X=-1.634239,Y=4.916335,Z=-5.765486),Orientation=(X=0.544728,Y=0.093579,Z=0.141099,W=0.821344),Radius=16.953554,Length=24.433138)))
+      BoneName="Wheel_R_02"
+      CollisionTraceFlag=CTF_UseSimpleAsComplex
+   End Object
+   Begin Object Name="SkeletalBodySetup_11"
+      AggGeom=(SphylElems=((Center=(X=-5.252282,Y=5.040565,Z=-4.393844),Orientation=(X=0.548650,Y=0.314347,Z=0.385131,W=0.672193),Radius=18.138046,Length=25.585890)))
+      BoneName="Wheel_R_01"
+      CollisionTraceFlag=CTF_UseSimpleAsComplex
+   End Object
+   Begin Object Name="SkeletalBodySetup_12"
+      AggGeom=(BoxElems=((Center=(X=0.108122,Y=-0.313552,Z=7.031098),Orientation=(X=0.499034,Y=0.497190,Z=0.500951,W=0.502808),X=170.609680,Y=52.722805,Z=338.955292)))
+      BoneName="T80_Root"
+      CollisionTraceFlag=CTF_UseSimpleAsComplex
+   End Object
+   PreviewSkeletalMesh=/Game/Vehicle/Meshes/T80/T80.T80
+   BoundsBodies(0)=0
+   BoundsBodies(1)=1
+   BoundsBodies(2)=2
+   BoundsBodies(3)=3
+   BoundsBodies(4)=4
+   BoundsBodies(5)=5
+   BoundsBodies(6)=6
+   BoundsBodies(7)=7
+   BoundsBodies(8)=8
+   BoundsBodies(9)=9
+   BoundsBodies(10)=10
+   BoundsBodies(11)=11
+   BoundsBodies(12)=12
+   SkeletalBodySetups(0)=SkeletalBodySetup'SkeletalBodySetup_0'
+   SkeletalBodySetups(1)=SkeletalBodySetup'SkeletalBodySetup_1'
+   SkeletalBodySetups(2)=SkeletalBodySetup'SkeletalBodySetup_2'
+   SkeletalBodySetups(3)=SkeletalBodySetup'SkeletalBodySetup_3'
+   SkeletalBodySetups(4)=SkeletalBodySetup'SkeletalBodySetup_4'
+   SkeletalBodySetups(5)=SkeletalBodySetup'SkeletalBodySetup_5'
+   SkeletalBodySetups(6)=SkeletalBodySetup'SkeletalBodySetup_6'
+   SkeletalBodySetups(7)=SkeletalBodySetup'SkeletalBodySetup_7'
+   SkeletalBodySetups(8)=SkeletalBodySetup'SkeletalBodySetup_8'
+   SkeletalBodySetups(9)=SkeletalBodySetup'SkeletalBodySetup_9'
+   SkeletalBodySetups(10)=SkeletalBodySetup'SkeletalBodySetup_10'
+   SkeletalBodySetups(11)=SkeletalBodySetup'SkeletalBodySetup_11'
+   SkeletalBodySetups(12)=SkeletalBodySetup'SkeletalBodySetup_12'
+   ConstraintSetup(0)=PhysicsConstraintTemplate'PhysicsConstraintTemplate_25'
+   ConstraintSetup(1)=PhysicsConstraintTemplate'PhysicsConstraintTemplate_26'
+   ConstraintSetup(2)=PhysicsConstraintTemplate'PhysicsConstraintTemplate_27'
+   ConstraintSetup(3)=PhysicsConstraintTemplate'PhysicsConstraintTemplate_28'
+   ConstraintSetup(4)=PhysicsConstraintTemplate'PhysicsConstraintTemplate_29'
+   ConstraintSetup(5)=PhysicsConstraintTemplate'PhysicsConstraintTemplate_30'
+   ConstraintSetup(6)=PhysicsConstraintTemplate'PhysicsConstraintTemplate_31'
+   ConstraintSetup(7)=PhysicsConstraintTemplate'PhysicsConstraintTemplate_32'
+   ConstraintSetup(8)=PhysicsConstraintTemplate'PhysicsConstraintTemplate_33'
+   ConstraintSetup(9)=PhysicsConstraintTemplate'PhysicsConstraintTemplate_34'
+   ConstraintSetup(10)=PhysicsConstraintTemplate'PhysicsConstraintTemplate_35'
+   ConstraintSetup(11)=PhysicsConstraintTemplate'PhysicsConstraintTemplate_36'
+End Object

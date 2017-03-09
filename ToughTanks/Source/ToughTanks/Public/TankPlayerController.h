@@ -7,6 +7,7 @@
 class UTankAimingComponent;
 //class ATank;
 // Responsible for helping the player be controlled
+
 UCLASS()
 class TOUGHTANKS_API ATankPlayerController : public APlayerController
 {

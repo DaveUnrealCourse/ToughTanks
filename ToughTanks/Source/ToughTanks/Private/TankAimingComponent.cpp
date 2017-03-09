@@ -137,5 +137,4 @@ void UTankAimingComponent::FireSec()
 	Projectile->LaunchProjectile(LaunchSpeedSec);
 	LastFireTimeSec = FPlatformTime::Seconds();
 	AmmoSec--;
-
 }

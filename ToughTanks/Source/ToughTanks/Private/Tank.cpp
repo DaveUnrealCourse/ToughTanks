@@ -3,8 +3,6 @@
 #include "ToughTanks.h"
 #include "Tank.h"
 
-
-
 float ATank::GetHealthPercent() const
 {
 	return (float)CurrentHealth / (float) StartingHealth;
@@ -54,4 +52,3 @@ void ATank::BeginPlay()
 //{
 //	Super::SetupPlayerInputComponent(InputComponent);
 //}
-

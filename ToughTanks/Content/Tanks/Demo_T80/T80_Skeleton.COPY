@@ -1,0 +1,64 @@
+Begin Object Class=Skeleton Name="T80_Skeleton"
+   Begin Object Class=SkeletalMeshSocket Name="SkeletalMeshSocket_0"
+   End Object
+   Begin Object Class=SkeletalMeshSocket Name="SkeletalMeshSocket_1"
+   End Object
+   Begin Object Class=SkeletalMeshSocket Name="SkeletalMeshSocket_3"
+   End Object
+   Begin Object Class=SkeletalMeshSocket Name="SkeletalMeshSocket_4"
+   End Object
+   Begin Object Name="SkeletalMeshSocket_0"
+      SocketName="T80_RootSocket"
+      BoneName="T80_Root"
+      RelativeLocation=(X=0.000000,Y=-0.000000,Z=30.573227)
+      RelativeRotation=(Pitch=0.000000,Yaw=90.000000,Roll=0.000000)
+   End Object
+   Begin Object Name="SkeletalMeshSocket_1"
+      SocketName="ForwardSocket"
+      BoneName="T80_Root"
+      RelativeLocation=(X=176.402161,Y=0.001007,Z=11.644100)
+   End Object
+   Begin Object Name="SkeletalMeshSocket_3"
+      SocketName="FLSocket"
+      BoneName="T80_Root"
+      RelativeLocation=(X=170.717651,Y=-83.159378,Z=11.644100)
+      RelativeRotation=(Pitch=0.000000,Yaw=-21.000000,Roll=0.000000)
+   End Object
+   Begin Object Name="SkeletalMeshSocket_4"
+      SocketName="FRSocket"
+      BoneName="T80_Root"
+      RelativeLocation=(X=171.761917,Y=83.008453,Z=11.644100)
+      RelativeRotation=(Pitch=0.000000,Yaw=20.000000,Roll=0.000000)
+   End Object
+   BoneTree(0)=()
+   BoneTree(1)=()
+   BoneTree(2)=()
+   BoneTree(3)=()
+   BoneTree(4)=()
+   BoneTree(5)=()
+   BoneTree(6)=()
+   BoneTree(7)=()
+   BoneTree(8)=()
+   BoneTree(9)=()
+   BoneTree(10)=()
+   BoneTree(11)=()
+   BoneTree(12)=()
+   BoneTree(13)=()
+   BoneTree(14)=()
+   BoneTree(15)=()
+   BoneTree(16)=()
+   BoneTree(17)=()
+   BoneTree(18)=()
+   BoneTree(19)=()
+   BoneTree(20)=()
+   BoneTree(21)=()
+   BoneTree(22)=()
+   BoneTree(23)=()
+   BoneTree(24)=()
+   BoneTree(25)=()
+   BoneTree(26)=()
+   Sockets(0)=SkeletalMeshSocket'SkeletalMeshSocket_0'
+   Sockets(1)=SkeletalMeshSocket'SkeletalMeshSocket_1'
+   Sockets(2)=SkeletalMeshSocket'SkeletalMeshSocket_3'
+   Sockets(3)=SkeletalMeshSocket'SkeletalMeshSocket_4'
+End Object

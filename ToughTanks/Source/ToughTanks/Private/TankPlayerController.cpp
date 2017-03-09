@@ -1,6 +1,6 @@
 // Copyright Dead Weight Dave Inc 2017
 #include "ToughTanks.h"
-#include "Tank.h"
+#include "Tank.h"// so I can impliment OnDeath
 #include "TankAimingComponent.h"
 #include "TankPlayerController.h"
 

@@ -1,0 +1,122 @@
+Begin Object Class=Material Name="T80_Caterpillar_L_Material"
+   Begin Object Class=MaterialExpressionAppendVector Name="MaterialExpressionAppendVector_3"
+   End Object
+   Begin Object Class=MaterialExpressionMaterialFunctionCall Name="MaterialExpressionMaterialFunctionCall_2"
+   End Object
+   Begin Object Class=MaterialExpressionScalarParameter Name="MaterialExpressionScalarParameter_0"
+   End Object
+   Begin Object Class=MaterialExpressionScalarParameter Name="MaterialExpressionScalarParameter_1"
+   End Object
+   Begin Object Class=MaterialExpressionTextureCoordinate Name="MaterialExpressionTextureCoordinate_1"
+   End Object
+   Begin Object Class=MaterialExpressionTextureSample Name="MaterialExpressionTextureSample_5"
+   End Object
+   Begin Object Class=MaterialExpressionTextureSample Name="MaterialExpressionTextureSample_6"
+   End Object
+   Begin Object Class=MaterialExpressionTextureSample Name="MaterialExpressionTextureSample_7"
+   End Object
+   Begin Object Class=MaterialExpressionTime Name="MaterialExpressionTime_0"
+   End Object
+   Begin Object Class=SceneThumbnailInfoWithPrimitive Name="SceneThumbnailInfoWithPrimitive_1"
+   End Object
+   Begin Object Name="MaterialExpressionAppendVector_3"
+      A=(Expression=MaterialExpressionScalarParameter'T80_Caterpillar_L_Material:MaterialExpressionScalarParameter_0')
+      B=(Expression=MaterialExpressionScalarParameter'T80_Caterpillar_L_Material:MaterialExpressionScalarParameter_1')
+      MaterialExpressionEditorX=-912
+      MaterialExpressionEditorY=-144
+      MaterialExpressionGuid=78FB65F04D0C38394D0F01B4BDE2A3E8
+      Material=Material'T80_Caterpillar_L_Material'
+   End Object
+   Begin Object Name="MaterialExpressionMaterialFunctionCall_2"
+      MaterialFunction=MaterialFunction'/Game/Vehicle/Materials/T80/PannerInstanceFunction.PannerInstanceFunction'
+      FunctionInputs(0)=(ExpressionInputId=72A2737946A57BE335952CA873CC69CD,Input=(Expression=MaterialExpressionAppendVector'T80_Caterpillar_L_Material:MaterialExpressionAppendVector_3',InputName="Speed"))
+      FunctionInputs(1)=(ExpressionInputId=B20456D344E062FD7E1916BA08FEA0C5,Input=(Expression=MaterialExpressionTime'T80_Caterpillar_L_Material:MaterialExpressionTime_0',InputName="Time"))
+      FunctionInputs(2)=(ExpressionInputId=A7DCEB0546D291421F27848BB68F510F,Input=(Expression=MaterialExpressionTextureCoordinate'T80_Caterpillar_L_Material:MaterialExpressionTextureCoordinate_1',InputName="Coordinates"))
+      FunctionOutputs(0)=(ExpressionOutputId=83203B804B5F5BC258B030AAF6E3B525,Output=(OutputName="Result"))
+      MaterialExpressionEditorX=-752
+      MaterialExpressionGuid=A6D858224C67498C2C6878A80EFF908B
+      Material=Material'T80_Caterpillar_L_Material'
+      Outputs(0)=(OutputName="Result")
+   End Object
+   Begin Object Name="MaterialExpressionScalarParameter_0"
+      SliderMin=-1.000000
+      SliderMax=1.000000
+      ParameterName="PanLeftX"
+      ExpressionGUID=909A2241437A7E2E959602AF1D1DDFDB
+      MaterialExpressionEditorX=-1136
+      MaterialExpressionEditorY=-224
+      MaterialExpressionGuid=16E6FE0149B519A7688AE9A8FC90628E
+      Material=Material'T80_Caterpillar_L_Material'
+   End Object
+   Begin Object Name="MaterialExpressionScalarParameter_1"
+      SliderMin=-1.000000
+      SliderMax=1.000000
+      ParameterName="PanLeftY"
+      ExpressionGUID=CD87419D4C95C04618BD4F900098F02A
+      MaterialExpressionEditorX=-1136
+      MaterialExpressionEditorY=-80
+      MaterialExpressionGuid=9A540B464B2E27E94BCB8BB859BFE631
+      Material=Material'T80_Caterpillar_L_Material'
+   End Object
+   Begin Object Name="MaterialExpressionTextureCoordinate_1"
+      MaterialExpressionEditorX=-1056
+      MaterialExpressionEditorY=192
+      MaterialExpressionGuid=135D9922434C3623B05603A593493C7F
+      Material=Material'T80_Caterpillar_L_Material'
+   End Object
+   Begin Object Name="MaterialExpressionTextureSample_5"
+      Coordinates=(Expression=MaterialExpressionMaterialFunctionCall'T80_Caterpillar_L_Material:MaterialExpressionMaterialFunctionCall_2')
+      Texture=Texture2D'/Game/Vehicle/Textures/T80/T80_Caterpillar_D.T80_Caterpillar_D'
+      MaterialExpressionEditorX=-320
+      MaterialExpressionEditorY=-160
+      MaterialExpressionGuid=1A9D807D421071A5F51F6197409085FB
+      Material=Material'T80_Caterpillar_L_Material'
+   End Object
+   Begin Object Name="MaterialExpressionTextureSample_6"
+      Coordinates=(Expression=MaterialExpressionMaterialFunctionCall'T80_Caterpillar_L_Material:MaterialExpressionMaterialFunctionCall_2')
+      Texture=Texture2D'/Game/Vehicle/Textures/T80/T80_Caterpillar_M.T80_Caterpillar_M'
+      MaterialExpressionEditorX=-320
+      MaterialExpressionEditorY=48
+      MaterialExpressionGuid=E8A2655347682B184104D6823EF94D9E
+      Material=Material'T80_Caterpillar_L_Material'
+   End Object
+   Begin Object Name="MaterialExpressionTextureSample_7"
+      Coordinates=(Expression=MaterialExpressionMaterialFunctionCall'T80_Caterpillar_L_Material:MaterialExpressionMaterialFunctionCall_2')
+      Texture=Texture2D'/Game/Vehicle/Textures/T80/T80_Caterpillar_R.T80_Caterpillar_R'
+      MaterialExpressionEditorX=-320
+      MaterialExpressionEditorY=256
+      MaterialExpressionGuid=E8C30FA443D8BBE9C5CA439349BF4A3E
+      Material=Material'T80_Caterpillar_L_Material'
+   End Object
+   Begin Object Name="MaterialExpressionTime_0"
+      MaterialExpressionEditorX=-1056
+      MaterialExpressionEditorY=16
+      MaterialExpressionGuid=08604665468764B912B33B83D919E780
+      Material=Material'T80_Caterpillar_L_Material'
+   End Object
+   Begin Object Name="SceneThumbnailInfoWithPrimitive_1"
+   End Object
+   BaseColor=(Expression=MaterialExpressionTextureSample'MaterialExpressionTextureSample_5',Mask=1,MaskR=1,MaskG=1,MaskB=1)
+   Metallic=(Expression=MaterialExpressionTextureSample'MaterialExpressionTextureSample_6',Mask=1,MaskR=1,MaskG=1,MaskB=1)
+   Roughness=(Expression=MaterialExpressionTextureSample'MaterialExpressionTextureSample_7',Mask=1,MaskR=1,MaskG=1,MaskB=1)
+   Normal=(Mask=1,MaskR=1,MaskG=1,MaskB=1)
+   bUsedWithSkeletalMesh=True
+   Expressions(0)=MaterialExpressionTextureSample'MaterialExpressionTextureSample_5'
+   Expressions(1)=MaterialExpressionTextureSample'MaterialExpressionTextureSample_6'
+   Expressions(2)=MaterialExpressionTextureSample'MaterialExpressionTextureSample_7'
+   Expressions(3)=MaterialExpressionTime'MaterialExpressionTime_0'
+   Expressions(4)=MaterialExpressionMaterialFunctionCall'MaterialExpressionMaterialFunctionCall_2'
+   Expressions(5)=MaterialExpressionTextureCoordinate'MaterialExpressionTextureCoordinate_1'
+   Expressions(6)=MaterialExpressionScalarParameter'MaterialExpressionScalarParameter_0'
+   Expressions(7)=MaterialExpressionAppendVector'MaterialExpressionAppendVector_3'
+   Expressions(8)=MaterialExpressionScalarParameter'MaterialExpressionScalarParameter_1'
+   MaterialFunctionInfos(0)=(StateId=3206253440C3EFD1DFD32A9DD0A25A37,Function=MaterialFunction'/Game/Vehicle/Materials/T80/PannerInstanceFunction.PannerInstanceFunction')
+   MaterialFunctionInfos(1)=(StateId=7C506B1D45AAC210E43E889B24F3D531,Function=MaterialFunction'/Engine/Functions/Engine_MaterialFunctions02/Math/TimeWithSpeedVariable.TimeWithSpeedVariable')
+   bCanMaskedBeAssumedOpaque=True
+   StateId=7D3D7ED34F41FC307EDB78A41E894BC3
+   ReferencedTextureGuids(0)=A60E687B4EDA600274A967AACEC2BBB6
+   ReferencedTextureGuids(1)=2870D5C1496AB5702BC072809B7272A3
+   ReferencedTextureGuids(2)=ABDA2AAF42BAAF01CE8B0D9FEA814445
+   ThumbnailInfo=SceneThumbnailInfoWithPrimitive'SceneThumbnailInfoWithPrimitive_1'
+   LightingGuid=9ACA21AD40D6CB36BE468F88B91636EF
+End Object
