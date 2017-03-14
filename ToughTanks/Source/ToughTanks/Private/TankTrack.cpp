@@ -18,13 +18,14 @@ void UTankTrack::BeginPlay()
 
 void UTankTrack::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, FVector NormalImpulse, const FHitResult& Hit)
 {
-	//drive the track
 	//Apply the sideways force
 	ApplySidewaysForce();
+	//drive the track
 	DriveTrack();
 	//UE_LOG(LogTemp, Warning, TEXT("%f Throttle"), CurrentThrottle)
 	CurrentThrottle = 0;
 }
+
 //void UTankTrack::TickComponent(float DeltaTime, enum ELevelTick TickType, FActorComponentTickFunction *ThisTickFunction){}
 void UTankTrack::ApplySidewaysForce()
 {
@@ -41,7 +42,7 @@ void UTankTrack::ApplySidewaysForce()
 
 void UTankTrack::SetThrottle(float Throttle)
 {
-	CurrentThrottle = FMath::Clamp<float>(CurrentThrottle + Throttle, -1.3, 1.3);
+	CurrentThrottle = FMath::Clamp<float>(CurrentThrottle + Throttle, -1.0, 1.9);
 }
 void UTankTrack::DriveTrack()
 {
