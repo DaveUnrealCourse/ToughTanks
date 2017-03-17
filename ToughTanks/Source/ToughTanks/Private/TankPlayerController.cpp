@@ -15,6 +15,7 @@ void ATankPlayerController::SetPawn(APawn* InPawn)
 		PossessedTank->OnDeath.AddUniqueDynamic(this, &ATankPlayerController::OnPossessedTankDeath);
 	}
 }
+
 void ATankPlayerController::BeginPlay()
 {
 	Super::BeginPlay();
