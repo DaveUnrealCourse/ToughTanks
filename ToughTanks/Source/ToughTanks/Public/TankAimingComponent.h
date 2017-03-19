@@ -13,6 +13,15 @@ enum class EFiringState : uint8
 	Locked,
 	AmmoOut
 };
+//Enum for Aiming state
+UENUM()
+enum class EFiringStateSec : uint8
+{
+	ReloadingSec,
+	AimingSec,
+	LockedSec,
+	AmmoOutSec
+};
 // forward declaration
 class AProjectile;
 class UBarrelPri;
@@ -45,6 +54,8 @@ public:
 protected:
 	UPROPERTY(BlueprintReadOnly, Category = "State")
 		EFiringState FiringState = EFiringState::Reloading;
+	UPROPERTY(BlueprintReadOnly, Category = "State")
+		EFiringStateSec FiringStateSec = EFiringStateSec::ReloadingSec;
 private:
 	UTankAimingComponent();
 

@@ -53,6 +53,28 @@ void UTankAimingComponent::TickComponent(float DeltaTime, enum ELevelTick TickTy
 		FiringState = EFiringState::Locked;
 		//UE_LOG(LogTemp, Warning, TEXT("Locked"));
 	}
+
+	//Second Barrel State
+	if (AmmoSec < 1)
+	{
+		FiringStateSec = EFiringStateSec::AmmoOutSec;
+		//UE_LOG(LogTemp, Warning, TEXT(" Ammo Out"));
+	}
+	else if ((FPlatformTime::Seconds() - LastFireTimeSec) < SecReloadTimeInSeconds)
+	{
+		FiringStateSec = EFiringStateSec::ReloadingSec;
+		//UE_LOG(LogTemp, Warning, TEXT(" Reloading"));
+	}
+	else if (IsBarrelMoving())
+	{
+		FiringStateSec = EFiringStateSec::AimingSec;
+		//UE_LOG(LogTemp, Warning, TEXT(" Aiming"));
+	}
+	else
+	{
+		FiringStateSec = EFiringStateSec::LockedSec;
+		//UE_LOG(LogTemp, Warning, TEXT("Locked"));
+	}
 }
 EFiringState UTankAimingComponent::GetFiringState() const
 {
@@ -125,16 +147,18 @@ void UTankAimingComponent::FirePri()
 }
 void UTankAimingComponent::FireSec()
 {
-
-	if (!ensure(BarrelSec)) { return; }
-	if (!ensure(SecProjectileBluePrint)) { return; }
-	//spawn a PROJECTILE
-	auto Projectile = GetWorld()->SpawnActor<AProjectile>(
-		SecProjectileBluePrint,
-		BarrelSec->GetSocketLocation(FName("Projectile")),
-		BarrelSec->GetSocketRotation(FName("Projectile"))
-		);
-	Projectile->LaunchProjectile(LaunchSpeedSec);
-	LastFireTimeSec = FPlatformTime::Seconds();
-	AmmoSec--;
+	if (FiringStateSec == EFiringStateSec::LockedSec || FiringStateSec == EFiringStateSec::AimingSec)
+	{
+		if (!ensure(BarrelSec)) { return; }
+		if (!ensure(SecProjectileBluePrint)) { return; }
+		//spawn a PROJECTILE
+		auto Projectile = GetWorld()->SpawnActor<AProjectile>(
+			SecProjectileBluePrint,
+			BarrelSec->GetSocketLocation(FName("Projectile")),
+			BarrelSec->GetSocketRotation(FName("Projectile"))
+			);
+		Projectile->LaunchProjectile(LaunchSpeedSec);
+		LastFireTimeSec = FPlatformTime::Seconds();
+		AmmoSec--;
+	}
 }
