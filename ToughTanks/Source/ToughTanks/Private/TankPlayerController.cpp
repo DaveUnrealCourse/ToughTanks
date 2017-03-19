@@ -31,10 +31,9 @@ void ATankPlayerController::Tick(float DeltaTime)
 
 void ATankPlayerController::OnPossessedTankDeath()
 {
-	auto DeadTank = GetPawn();
-
-	StartSpectatingOnly();
-	DeadTank->Destroy();
+	//auto DeadTank = GetPawn();
+	//StartSpectatingOnly();
+	//DeadTank->Destroy();
 	UE_LOG(LogTemp, Warning, TEXT("Player tank is Dead"))
 }
 void ATankPlayerController::AimTowardsCrosshair()

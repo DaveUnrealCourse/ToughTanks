@@ -25,7 +25,7 @@ void ATankAIController::OnPossessedTankDeath()
 	if (!ensure(GetPawn())){return;}//TODO Remove ensure if ok
 	auto DeadTank = GetPawn();
 	GetPawn()->DetachFromControllerPendingDestroy();
-	DeadTank->Destroy();
+	//DeadTank->Destroy();
 	UE_LOG(LogTemp, Warning, TEXT("AI tank is Dead"))
 }
 
