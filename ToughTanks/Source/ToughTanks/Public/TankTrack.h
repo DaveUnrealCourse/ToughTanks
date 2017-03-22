@@ -18,6 +18,10 @@ public:
 	//Max Force in Newtons!!!
 	UPROPERTY(EditDefaultsOnly, Category = "Setup")
 		float TrackMaxDrivingFource = 6000000;//Assume 40 ton tank and 1 g of exceleration
+	UPROPERTY(EditDefaultsOnly, Category = "Setup")
+		float MaxForwardSpeed = 1;
+	UPROPERTY(EditDefaultsOnly, Category = "Setup")
+		float MaxReverseSpeed = -1;
 private:
 	UTankTrack();
 	virtual void BeginPlay() override;

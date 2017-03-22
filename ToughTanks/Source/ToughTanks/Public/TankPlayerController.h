@@ -19,17 +19,23 @@ public:
 		float CrossHairYLocation = 0.3333;
 	UPROPERTY(EditDefaultsOnly)
 		float LineTraceRange = 6000000;
+
+	UFUNCTION(BlueprintCallable, Category = State)
+		void BP_ChangeState_Spectator();
+
+	UFUNCTION(BlueprintCallable, Category = State)
+		void BP_ChangeState_Player();
+
 protected:
 	UFUNCTION(BlueprintImplementableEvent, Category = "Setup")
 		void FoundAimingComponent(UTankAimingComponent* AimCompRef);
 //	UFUNCTION(BlueprintCallable, Category = "Setup")
 	//	ATank* GetControlldTank() const;
-
-private:
-
-	virtual void BeginPlay() override;
-	UFUNCTION()//BlueprintImplementableEvent, Category = "Dead")
+	UFUNCTION(BlueprintImplementableEvent, Category = "Setup")//BlueprintImplementableEvent, Category = "Dead")
 	void OnPossessedTankDeath();
+private:
+	virtual void BeginPlay() override;
+	
 	//On Death Stuff
 	virtual void SetPawn(APawn* InPawn) override;
 

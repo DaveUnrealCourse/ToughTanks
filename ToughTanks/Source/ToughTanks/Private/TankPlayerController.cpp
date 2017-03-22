@@ -4,6 +4,7 @@
 #include "TankAimingComponent.h"
 #include "TankPlayerController.h"
 
+
 void ATankPlayerController::SetPawn(APawn* InPawn)
 {
 	Super::SetPawn(InPawn);
@@ -29,13 +30,31 @@ void ATankPlayerController::Tick(float DeltaTime)
 	AimTowardsCrosshair();
 }
 
+void ATankPlayerController::BP_ChangeState_Spectator()
+{
+	ChangeState(NAME_Spectating);
+	if (Role == ROLE_Authority && PlayerState != NULL)
+	{
+		PlayerState->bIsSpectator = true;
+	}
+}
+
+void ATankPlayerController::BP_ChangeState_Player()
+{
+	ChangeState(NAME_Playing);
+	if (Role == ROLE_Authority && PlayerState != NULL)
+	{
+		PlayerState->bIsSpectator = false;
+	}
+}
+/*
 void ATankPlayerController::OnPossessedTankDeath()
 {
 	//auto DeadTank = GetPawn();
 	//StartSpectatingOnly();
 	//DeadTank->Destroy();
 	UE_LOG(LogTemp, Warning, TEXT("Player tank is Dead"))
-}
+}*/
 void ATankPlayerController::AimTowardsCrosshair()
 {
 	if (!ensure(GetPawn())) { return; }
