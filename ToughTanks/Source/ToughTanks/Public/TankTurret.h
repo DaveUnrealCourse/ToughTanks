@@ -16,15 +16,11 @@ class TOUGHTANKS_API UTankTurret : public UStaticMeshComponent
 public:
 
 	void Azimuth(float RelativeSpeed);
-	UFUNCTION(BlueprintCallable, Category = "Input")
-		void RockLeft();
-	UFUNCTION(BlueprintCallable, Category = "Input")
-		void RockRight();
 //	UPROPERTY(EditDefaultsOnly, Category = "Setup")
 	//	FVector RockForce =  (0.f,100.f,0.f);
 private:
 	UPROPERTY(EditDefaultsOnly, Category = "Setup")
-		float MaxDegreesPerSecond = 25;
+		float MaxDegreesPerSecond = 45;
 
 
 };

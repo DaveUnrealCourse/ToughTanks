@@ -47,14 +47,7 @@ void ATankPlayerController::BP_ChangeState_Player()
 		PlayerState->bIsSpectator = false;
 	}
 }
-/*
-void ATankPlayerController::OnPossessedTankDeath()
-{
-	//auto DeadTank = GetPawn();
-	//StartSpectatingOnly();
-	//DeadTank->Destroy();
-	UE_LOG(LogTemp, Warning, TEXT("Player tank is Dead"))
-}*/
+
 void ATankPlayerController::AimTowardsCrosshair()
 {
 	if (!ensure(GetPawn())) { return; }

@@ -13,9 +13,14 @@ class TOUGHTANKS_API ATankPlayerController : public APlayerController
 {
 	GENERATED_BODY()
 public:
-	UPROPERTY(EditDefaultsOnly)
+/*	UPROPERTY(EditDefaultsOnly)
 		float CrossHairXLocation = 0.5;//crossXlocation
 	UPROPERTY(EditDefaultsOnly)
+		float CrossHairYLocation = 0.3333;
+		*///in case i fuck this up i have this part saved TODO get rid of this
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "crosshair")
+		float CrossHairXLocation = 0.5;//crossXlocation
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "crosshair")
 		float CrossHairYLocation = 0.3333;
 	UPROPERTY(EditDefaultsOnly)
 		float LineTraceRange = 6000000;
