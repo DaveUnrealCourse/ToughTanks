@@ -18,6 +18,16 @@ float ATank::GetCurrentHealth()
 	return (float)CurrentHealth;
 }
 
+void ATank::SetCurrentHealthUp()
+{ 
+	if (CurrentHealth < 50) {
+		CurrentHealth = CurrentHealth + 50;
+	}
+	else {
+		CurrentHealth = 100;
+	}
+}
+
 // Sets default values
 ATank::ATank()
 {

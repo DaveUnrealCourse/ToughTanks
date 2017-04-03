@@ -82,6 +82,14 @@ EFiringState UTankAimingComponent::GetFiringState() const
 }
 int32 UTankAimingComponent::GetPriAmmoCount() const { return AmmoPri; }
 int32 UTankAimingComponent::GetSecAmmoCount() const { return AmmoSec; }
+void UTankAimingComponent::SetPriAmmoCount() {
+	AmmoPri = AmmoPri + 2; //PriAmmoUp;
+//	return AmmoPri; 
+}
+void UTankAimingComponent::SetSecAmmoCount() { 
+	AmmoSec = AmmoSec + 500; //SecAmmoUp;
+//	return AmmoSec; 
+}
 
 void UTankAimingComponent::AimAt(FVector HitLocation)
 {
@@ -111,7 +119,6 @@ void UTankAimingComponent::AimAt(FVector HitLocation)
 		//UE_LOG(LogTemp, Warning, TEXT("%s I Have No Aim Direction"),Name);
 	}
 }
-
 void UTankAimingComponent::MoveBarrelTowards(FVector AimDirection)
 {
 	if (!ensure(BarrelPri && BarrelSec && Turret)) { return; }

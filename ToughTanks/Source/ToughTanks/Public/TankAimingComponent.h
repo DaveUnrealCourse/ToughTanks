@@ -46,6 +46,15 @@ public:
 		int32 GetPriAmmoCount() const;
 	UFUNCTION(BlueprintCallable, Category = "Setup")
 		int32 GetSecAmmoCount() const;
+	UFUNCTION(BlueprintCallable, Category = "Setup")
+		void SetPriAmmoCount();
+	UFUNCTION(BlueprintCallable, Category = "Setup")
+		void SetSecAmmoCount();
+//	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Setup")
+//		int32 PriAmmoUp;
+//	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Setup")
+//		int32 SecAmmoUp;
+
 
 	void AimAt(FVector HitLocation);
 

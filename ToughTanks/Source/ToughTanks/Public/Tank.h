@@ -21,6 +21,8 @@ public:
 	float GetStartingHealth();
 	UFUNCTION(Blueprintpure, Category = "Health")
 	float GetCurrentHealth();
+	UFUNCTION(BlueprintCallable, Category = "Health")
+	void SetCurrentHealthUp();
 	UPROPERTY(BlueprintAssignable, Category = "Test")//not needed?
 	FTankDelegate OnDeath;
 	// Called when the game starts or when spawned

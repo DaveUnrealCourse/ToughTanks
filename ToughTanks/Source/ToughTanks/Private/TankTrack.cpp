@@ -15,7 +15,7 @@ void UTankTrack::BeginPlay()
 
 	OnComponentHit.AddDynamic(this, &UTankTrack::OnHit);
 }
-
+// if your using the hover thing than change this to tick and make a break that will apply backwards force just like the side one
 void UTankTrack::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, FVector NormalImpulse, const FHitResult& Hit)
 {
 	//Apply the sideways force
