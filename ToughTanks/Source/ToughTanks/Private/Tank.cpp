@@ -42,11 +42,17 @@ float ATank::TakeDamage(float DamageAmount, struct FDamageEvent const & DamageEv
 	CurrentHealth -= DamageToApply;
 	if (CurrentHealth <= 0)
 	{
+		//DamageCauser = AActor::GetOwner(DamageCauser);
+		WhoKilledMe = EventInstigator;
 		OnDeath.Broadcast();
 	}
 	return DamageToApply;
 
 }
+//FString ATank::GetWhoKilledMe()
+//{
+//	return WhoKilledMe;
+//}
 // Called when the game starts or when spawned
 void ATank::BeginPlay()
 {

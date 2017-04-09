@@ -14,6 +14,7 @@ class TOUGHTANKS_API ATank : public APawn
 
 public:
 	//called by the engine when actor damage is delt
+	UFUNCTION(Blueprintpure, Category = "Test")//not needed?
 	virtual float TakeDamage(float DamageAmount,struct FDamageEvent const & DamageEvent,class AController * EventInstigator,AActor * DamageCauser) override;
 	UFUNCTION(Blueprintpure, Category = "Health")
 	float GetHealthPercent() const;
@@ -25,6 +26,12 @@ public:
 	void SetCurrentHealthUp();
 	UPROPERTY(BlueprintAssignable, Category = "Test")//not needed?
 	FTankDelegate OnDeath;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)//not needed?
+	AController * WhoKilledMe;
+//	UFUNCTION(BlueprintCallable, Category = "Death")
+//	FString WhoKilledMe;
+//	FString GetWhoKilledMe();
+
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 	// Called every frame
@@ -32,6 +39,7 @@ public:
 
 private:
 	ATank();
+	//float TakeDamage(float DamageAmount, FDamageEvent const & DamageEvent, AController * EventInstigator, AActor * DamageCauser);
 	UPROPERTY(EditDefaultsOnly, Category = "Health")
 	int32 StartingHealth = 100;
 	UPROPERTY(EditDefaultsOnly, Category = "Health")
